@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <cs50.h>
+
+// Just returning the value that the person entered. Can subsitute with other codes
+int get_positive_int (void);
+
+int main (void)
+{
+    int num = get_positive_int ();
+    printf("This number? %i", num);
+}
+
+//prompt user for positive integer <-New function created, get_postive_int ()
+int get_positive_int (void)
+{
+    int n;
+    do
+    {
+        n = get_int ("Positive integer please:\n");
+    }
+    while (n<1);
+    return n;
+}
